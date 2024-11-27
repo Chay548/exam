@@ -3,7 +3,7 @@ public class Prime {
     public static void main(String[] args) {
         int n=48;
 if (isPrime(n)) {
-    System.out.println(n + "prime number.");
+    System.out.println(n + "number prime number.");
 } else {
     System.out.println(n + "not prime number.");
 }
