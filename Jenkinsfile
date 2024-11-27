@@ -3,15 +3,21 @@ pipeline{
     stages{
         stage("build")
         {
-            build 'docker -t node-app'
+            script{                
+            build 'docker build -t node-app'
+            }
         }
-        stage("test")
+        stage("test"){
+        script
         {
             echo 'testing'
         }
+        }
         stage("deploy")
         {
+            script{
             echo 'depolying'
+            }
         }
     }
 }
