@@ -1,15 +1,15 @@
 pipeline{
-    anyagent
+    @anyagent
     stages{
-        stage('build')
+        stage("build")
         {
             build 'docker -t node-app'
         }
-        stage('test')
+        stage("test")
         {
             echo 'testing'
         }
-        stage('deploy')
+        stage("deploy")
         {
             echo 'depolying'
         }
