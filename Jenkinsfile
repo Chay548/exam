@@ -1,22 +1,26 @@
-pipeline{
-    @anyagent
-    stages{
-        stage("build")
-        {
-            script{                
-            build 'docker build -t node-app'
+pipeline {
+    agent any
+
+    stages {
+        stage("build") {
+            steps {
+                script {
+                    sh 'docker build -t node-app .'
+                }
             }
         }
-        stage("test"){
-        script
-        {
-            echo 'testing'
+        stage("test") {
+            steps {
+                script {
+                    echo 'testing'
+                }
+            }
         }
-        }
-        stage("deploy")
-        {
-            script{
-            echo 'depolying'
+        stage("deploy") {
+            steps {
+                script {
+                    echo 'deploying'
+                }
             }
         }
     }
