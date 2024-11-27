@@ -7,21 +7,21 @@ pipeline {
                 script {
                     sh 'docker build -t node-app .'
                 }
-            }
-        }
+                            }
+ }
         stage("test") {
             steps {
                 script {
                     echo 'testing'
-                }
+}
             }
-        }
+}
         stage("deploy") {
             steps {
                 script {
                     echo 'deploying'
                 }
-            }
+}
         }
     }
 }
